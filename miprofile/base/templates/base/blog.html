@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karanja</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        body {
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            font-family: 'VT323', monospace; /* Monospaced font for tech vibe */
+        }
+
+        .header, .footer {
+            background-color: #0f0f0f; /* Very dark background */
+            padding: 0px 0;
+            border-bottom: 2px solid #00ff00; /* Neon green border for header */
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Neon green shadow for header */
+        }
+        
+        .footer {
+            border-top: 2px solid #00ff00; /* Neon green border for footer */
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #1e1e1e; /* Dark card background */
+            border: 1px solid #333; /* Darker border */
+            color: #e0e0e0; /* Light text color */
+            margin-bottom: 20px;
+        }
+
+        .card-body-custom {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+        }
+
+        .sidebar {
+            background-color: #1e1e1e; /* Dark sidebar background */
+            color: #e0e0e0; /* Light text color */
+            min-height: 100vh;
+            padding: 1px;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar .list-group-item {
+            background-color: #333; /* Dark background for list items */
+            color: #e0e0e0; /* Light text color */
+            border-color: #333; /* Dark border */
+        }
+
+        .sidebar .list-group-item:hover {
+            background-color: #00ff00; /* Neon green on hover */
+            color: #1e1e1e; /* Dark text on hover */
+        }
+        /* Container for social icons */
+        .social-icons {
+            background-color: #000000; /* Black background for the container */
+            padding: 10px; /* Space around the icons */
+            display: flex; /* Use Flexbox layout */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+        }
+        
+        /* Style for individual social icon links */
+        .social-icons a {
+            text-decoration: none; /* Remove underline from links */
+            font-size: 1.5rem; /* Adjust size as needed */
+            transition: color 0.3s; /* Smooth color transition on hover */
+        }
+        
+        /* Official colors for specific social icons */
+        .social-icons .github-icon {
+            color: #333; /* Official GitHub color */
+        }
+        
+        .social-icons .linkedin-icon {
+            color: #0077b5; /* Official LinkedIn color */
+        }
+        
+        /* Additional colors for other social icons */
+        .social-icons .twitter-icon {
+            color: #1da1f2; /* Twitter Blue */
+        }
+        
+        .social-icons .tumblr-icon {
+            color: #354bab; /* Tumblr Blue */
+        }
+        
+        .social-icons .discord-icon {
+            color: #7289da; /* Discord blue color */
+        }
+        
+        /* Hover effect for icons */
+        .social-icons a:hover {
+            color: #00ff00; /* Neon green on hover */
+        }
+        
+        /* Optional: Style for grouping icons in pairs */
+        .icon-pair {
+            display: flex; /* Align icons horizontally within a pair */
+            flex-direction: column; /* Stack icons vertically within a pair */
+            gap: 10px; /* Space between icons in a pair */
+            margin-bottom: 20px; /* Space between icon pairs */
+        }
+        
+        /* Optional: Add a "neon" glow effect to text */
+        .neon-text {
+            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+        }
+
+        /* Frames with asterisks */
+        .asterisk-frame {
+            border: 2px solid #00ff00; /* Neon green border */
+            padding: 10px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .asterisk-frame:before,
+        .asterisk-frame:after {
+            content: '***';
+            color: #00ff00; /* Neon green asterisks */
+            position: absolute;
+            font-size: 1.2rem;
+        }
+
+        .asterisk-frame:before {
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .asterisk-frame:after {
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Blue text for some elements */
+        .blue-text {
+            color: #1e90ff; /* Dodger Blue */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand neon-text" href="/">4ss3t 👋🏽</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link neon-text" href="/"><b><em>Home</em></b></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar">
+                    <div class="list-group">
+                        <img id="profile-pic" src="{% static 'images/pPEHCS8j_400x400.jpg' %}" alt="Profile Picture" class="img-fluid mb-4">
+                    </div>
+                    <div class="list-group mt-4">
+                        <a href="{% url 'category' category_id=1 %}" class="list-group-item list-group-item-action">Posts</a>
+                        <a href="{% url 'upcoming_events' %}" class="list-group-item list-group-item-action">Upcoming CTFs</a>
+                    </div>
+                    <div class="social-icons mt-4">
+                        <a href="https://github.com/Mburu-karanja" class="btn github-icon" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mburu-karanja-218400280/" class="btn linkedin-icon" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://x.com/mburu_karanja_" class="btn twitter-icon" target="_blank"
+                            aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.tumblr.com/blog/mburujone" class="btn tumblr-icon" target="_blank"
+                            aria-label="Tumblr">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                        <a href="https://discord.com/Mburu" class="btn discord-icon" target="_blank"
+                            aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <!-- Main content area -->
+                {% block content %}
+                <div class="asterisk-frame">
+                    <h4 class="blue-text"><em>Blog Posts</em></h4>
+                </div>
+                <div class="row">
+                    {% for post in posts %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-body card-body-custom">
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.preview|slice:":500" }}{% if post.content|length > 500 %}...{% endif %}</p>
+                                <a href="{% url 'post_detail' post_id=post.id %}" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p>No posts available.</p>
+                    {% endfor %}
+                </div>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 4ss3t. <em>All rights reserved.</em></p>
+            <p><a href="mailto:maura.karanja@gmail.com"><b>mburu</b></a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+django-markdownx
+requests
+beautifulsoup
